@@ -1,0 +1,9 @@
+Bach,_Johann_Sebastian
+Beethoven,_Ludwig_van
+Chopin,_Fr%C3%A9d%C3%A9ric
+Haydn,_Joseph
+Liszt,_Franz
+Mozart,_Wolfgang_Amadeus
+Schubert,_Franz
+Schumann,_Robert
+Scriabin,_Aleksandr

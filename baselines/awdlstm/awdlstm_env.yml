@@ -1,0 +1,23 @@
+name: PianoStyleEmbedding_Train
+
+channels:
+  - fastai
+  - conda-forge
+  - anaconda
+  - defaults
+  - pytorch
+dependencies:
+  - python >=3.7,<3.8
+  - beautifulsoup4=4.8.1
+  - requests=2.22.0
+  - fastai=1.0.59
+  - conda-forge::pytorch
+  - scikit-learn=0.24.2
+  - plotnine=0.7.1
+  - ipykernel
+  - opencv=3.4.7
+  - librosa=0.8
+  - scikit-image=0.15.0
+  - tensorboardx=2.5
+  - transformers=3.0.2
+  - regex=2022.9.13
