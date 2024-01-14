@@ -1,4 +1,4 @@
-name: gpt2
+name: baselines
 channels:
   - pytorch
   - nvidia
