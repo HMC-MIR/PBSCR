@@ -5,7 +5,9 @@ The purpose of this repository is to recognize the composer of a piece based on 
 
 To reproduce the GPT2 results:
 1. Create and activate a Python virtual environment using baselines.yml
-2. Run 01_gpt2_pretraining.ipynb to generate the bash script for pretraining
-3. Unzip 9_way_dataset.zip and 100_way_dataset.zip
-4. Run train_lm.sh to train the model
-5. Run gpt2_LP_and_FT.ipynb
+2. Run LM_pretraining_data_preprocessing.ipynb
+3. Run 01_gpt2_pretraining.ipynb to generate the bash script for pretraining
+4. Unzip 9_way_dataset.zip and 100_way_dataset.zip
+5. Copy run_clm.py to same folder as the shell script
+6. Run train_lm.sh to train the model
+7. Run gpt2_LP_and_FT.ipynb
