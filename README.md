@@ -24,10 +24,11 @@ See below for instructions on data replication.
 2. Git clone PBSCSR repo into ttmp (if done before, skip this step)
 3. (Optional) Run  data_creation.ipynb
    This jupyter notebook clone the imslp_bootleg_dir-v1
-4. Filter filler, which generate imslp_bootleg_dir-v1.1
-5. This allows you to have a copy of both versions of imslp bootleg.
-6. The PBSCSR repo already has imslp_bootleg_dir-v1.1
-7. Run LM_pretraining_data_preprocessing.ipynb,which is located in /PBSCSR/baselines/LM_pretraining_data_preprocessing.ipynb. Does not matter which version of  imslp bootleg you are pointing to in this step because there’s a same filter filler like in step 3 to generate imslp_bootleg_dir-v1.1
+   Filter filler, which generate imslp_bootleg_dir-v1.1
+   This allows you to have a copy of both versions of imslp bootleg.
+6. The PBSCSR repo already has imslp_bootleg_dir-v1.1, you can just point to this directory
+7. Run LM_pretraining_data_preprocessing.ipynb,which is located in /PBSCSR/baselines/LM_pretraining_data_preprocessing.ipynb. Does not matter which version of  imslp bootleg you are pointing to in this step because there’s a same filter filler like in step 3 to generate imslp_bootleg_dir-v1.1. (if )
+
 8. Run 01_roberta_pretraining.ipynb stop after finishing running Language Model Pretraining section.
 9. Before keep going to run Language Model Pretraining Curves section, run the bash script  train_lm.sh in the output directory you specify when running Language Model Pretraining
 10. Run the bash script in a persistent shell session (like tmux or screen) with the baselines environment. This process may take about 4-5 hours
