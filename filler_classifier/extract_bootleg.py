@@ -11,6 +11,7 @@ import time
 import cv2
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
+import numpy.matlib as npm
 import numpy as np
 import pyximport
 from PIL import Image, ImageChops, ImageFilter
@@ -145,7 +146,7 @@ def computeStaveFeatureMap(img, ncols, lrange, urange, delta):
     lineseps = np.arange(lrange, urange, delta)
     maxFiltSize = int(np.ceil(4 * lineseps[-1])) + 1
     featmap = np.zeros((len(lineseps), imgHeight - maxFiltSize + 1, ncols))
-    stavelens = np.zeros(len(lineseps), dtype=np.int)
+    stavelens = np.zeros(len(lineseps), dtype=np.int32)
     for i, linesep in enumerate(lineseps):
         filt, stavelen = getCombFilter(linesep)
         padded = np.zeros((maxFiltSize, 1))
@@ -860,7 +861,7 @@ def processImageFile(imagefile, outfile):
         stavelens,
         columnWidth,
         maxDeltaRowRefined,
-        (nhRowOffsets - 2 * targetLineSep).astype(np.int),
+        (nhRowOffsets - 2 * targetLineSep).astype(np.int32),
     )
     nhvals = estimateNoteLabels(estStaffLineLocs)
 
