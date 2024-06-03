@@ -30,7 +30,6 @@ L = 16
 
 
 def run_ensemble_method(page):
-    # classify any page with < 32 features as filler
     if page.shape[1] < 32:
         return float(1.0)
 
@@ -53,7 +52,7 @@ def run_ensemble_method(page):
 if __name__ == "__main__":
     torch.cuda.empty_cache()
 
-    data_path = Path("filler")
+    data_path = Path("data")
     seed = 42
     tokenizer_path = data_path / "tokenizer/tokenizer.json"
     classifier_output_model_path = data_path / "finetune_lm"
@@ -72,25 +71,12 @@ if __name__ == "__main__":
     model.pad_token_id = tokenizer.pad_token_id
     model.eval()
 
-    # pickles = glob.glob(str(data_path/'piano_bootleg_scores/imslp_bootleg_dir-v1/**/*.pkl'), recursive=True)
-    # pickles.sort()
-    # for i in range(len(pickles)):
-    #     pickles[i] = pickles[i].rsplit("/", 1)
-
-    # seen = set()
-    # paths = []
-    # for dir, filename in pickles:
-    #     if dir in seen:
-    #         continue
-    #     seen.add(dir)
-    #     paths.append(f"{dir}/{filename}")
-
     paths = glob.glob(
-        str(data_path / "piano_bootleg_scores/imslp_bootleg_dir-v1/**/*.pkl"),
+        "../imslp_bootleg_dir-v1.1/**/*.pkl",
         recursive=True,
     )
 
-    with open("../cfg_files/filler.tsv", "w") as f:
+    with open("cfg_files/filler.tsv", "w") as f:
         n, total = 0, len(paths)
         print(f"There are {total} bootlegs scores")
 
@@ -101,7 +87,7 @@ if __name__ == "__main__":
             )  # "filler/piano_bootleg_scores/imslp_bootleg_dir-v1/Charbonnet,_Alice_Ellen/Danse_des_sorci%C3%A8res_", "385306.pkl"
             piece_id = piece_id.split(".")[0]  # 385306
             root = root.replace(
-                "filler/piano_bootleg_scores/imslp_bootleg_dir-v1/", ""
+                "../imslp_bootleg_dir-v1.1/", ""
             )  # Charbonnet,_Alice_Ellen/Danse_des_sorci%C3%A8res_
 
             for i, page in enumerate(piece):

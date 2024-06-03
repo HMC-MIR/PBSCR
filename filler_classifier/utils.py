@@ -38,12 +38,11 @@ def save_to_pickle(d, outfile):
 
 
 def visualize_bootleg(bs, lines=[13, 15, 17, 19, 21, 35, 37, 39, 41, 43]):
-    plt.figure(figsize=(10, 10))
+    plt.figure(dpi=1200)
+    plt.axis("off")
     plt.imshow(1 - bs, cmap="gray", origin="lower")
-    for l in range(1, bs.shape[0], 2):
-        plt.axhline(l, c="grey")
     for l in lines:
-        plt.axhline(l, c="r")
+        plt.axhline(l, c="black", lw=0.4)
     plt.show()
 
 
