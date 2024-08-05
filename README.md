@@ -40,3 +40,15 @@ See below for instructions on data replication.
 1. Activate baselines virtual environment: conda activate baselines
 2. Run the embeddings notebook located at /home/username/ttmp/PBSCR/baselines/fewshot_embeddings.ipynb
 3. Run the experiment notebook located at /home/username/ttmp/PBSCR/baselines/fewshot_experiment.ipynb
+
+
+## Citation
+
+Arhan Jain, Alec Bunn, Austin Pham, and TJ Tsai.  "PBSCR: The Piano Bootleg Score Composer Recognition Dataset."  Transactions of the International Society for Music Information Retrieval, to appear.
+
+
+## Acknowledgments
+
+This material is based upon work supported by the National Science Foundation under Grant No. 2144050.  Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+
+
