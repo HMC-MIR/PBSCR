@@ -44,7 +44,7 @@ See below for instructions on data replication.
 
 ## Citation
 
-Arhan Jain, Alec Bunn, Austin Pham, and TJ Tsai.  "PBSCR: The Piano Bootleg Score Composer Recognition Dataset."  Transactions of the International Society for Music Information Retrieval, to appear.
+Arhan Jain, Alec Bunn, Austin Pham, and TJ Tsai.  "PBSCR: The Piano Bootleg Score Composer Recognition Dataset."  Transactions of the International Society for Music Information Retrieval, 2024, 7(1): 1-20.
 
 
 ## Acknowledgments
